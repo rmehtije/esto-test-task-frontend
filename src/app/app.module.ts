@@ -8,7 +8,9 @@ import { RegistrationComponent } from './registrationComponent/registration.comp
 import { LoginComponent } from './loginComponent/login.component';
 import { ProfileComponent } from './profileComponent/profile.component';
 import { FormsModule } from '@angular/forms';
-import { authInterceptorProviders } from './helpers/authentication.interceptor';
+import { ApolloModule } from 'apollo-angular';
+import { HttpLinkModule } from 'apollo-angular-link-http';
+
 
 @NgModule({
   declarations: [
@@ -22,9 +24,11 @@ import { authInterceptorProviders } from './helpers/authentication.interceptor';
     FormsModule,
     RouterModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ApolloModule,
+    HttpLinkModule,
   ],
-  providers: [authInterceptorProviders],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

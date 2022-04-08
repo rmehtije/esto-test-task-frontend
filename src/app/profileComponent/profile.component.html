@@ -4,19 +4,12 @@
         <strong>{{ currentUser.name }}</strong> Profile
       </h3>
     </header>
-    <p>
-      <strong>Token:</strong>
-      {{ currentUser.accessToken.substring(0, 20) }} ...
-      {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-    </p>
-    <p>
-      <strong>Email:</strong>
-      {{ currentUser.email }}
-    </p>
-    <a href="" (click)="logout()" class="btn btn-primary btn-block">
+    <button (click)="logout()" class="btn btn-primary btn-block">
       LogOut
-    </a>
+    </button>
 </div>
-  <ng-template #loggedOut>
-    Please login.
-  </ng-template>
+<ng-template #loggedOut>
+  <div class="container">
+    <h3>Please login.</h3>
+  </div>
+</ng-template>

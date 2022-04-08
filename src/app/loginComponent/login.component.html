@@ -33,7 +33,7 @@
         name="password"
         [(ngModel)]="form.password"
         required
-        minlength="8"
+        minlength="6"
         #password="ngModel"
       />
       <div
@@ -64,7 +64,4 @@
       </div>
     </div>
   </form>
-  <div class="alert alert-success" *ngIf="isLoggedIn">
-    Logged in as {{ roles }}.
-  </div>
 </main>
